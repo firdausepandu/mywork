@@ -32,46 +32,9 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(padding: const EdgeInsets.fromLTRB(20, 20, 20, 70), child: Image.asset("asset/img/MyWork_Employee.png",height: 100,width: 100,),),
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(90.0),
-                        ),
-                        labelText: 'Email',
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(90.0),
-                        ),
-                        labelText: 'Password',
-                      ),
-                    ),
-                  ),
-                  Container(
-                      height: 80,
-                      padding: const EdgeInsets.all(20),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          minimumSize: const Size.fromHeight(50),
-                        ),
-                        child: const Text('Log In'),
-                        onPressed: () {},
-                      )),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.grey[600]),
-                    ),
-                  ),
+                  Container(padding: const EdgeInsets.fromLTRB(20, 20, 20, 0), child: TextField(decoration: InputDecoration(prefixIcon:Icon(Icons.person,color:Colors.cyanAccent),border: OutlineInputBorder(borderRadius: BorderRadius.circular(90.0),), labelText: 'USERNAME',labelStyle: TextStyle(color: Colors.grey)),),),
+                  Container(padding: const EdgeInsets.fromLTRB(20, 20, 20, 0), child: TextField(obscureText: true, decoration: InputDecoration(prefixIcon:Icon(Icons.lock,color:Colors.cyanAccent),border: OutlineInputBorder(borderRadius: BorderRadius.circular(90.0),borderSide: BorderSide(width: 5)), labelText: 'PASSWORD',labelStyle: TextStyle(color: Colors.grey)),),),
+                  Container(height: 80, padding: const EdgeInsets.all(20), child: ElevatedButton(style: ElevatedButton.styleFrom(minimumSize: const Size.fromHeight(50),primary: Colors.white), child: const Text('SIGN IN',style: TextStyle(color: Color(0xff29347d)),), onPressed: () {},)),
                 ],
               ),
             )));
