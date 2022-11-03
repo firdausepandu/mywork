@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
             // is not restarted.
             primarySwatch: Colors.blue,
             scaffoldBackgroundColor: const Color(0xff29347d)),
+
         home: Scaffold(
             body: Center(
           child: Column(
@@ -46,6 +47,13 @@ class MyApp extends StatelessWidget {
                       prefixIcon:
                           const Icon(Icons.person, color: Colors.cyanAccent),
                       border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.cyanAccent, width: 0.0),
+                        borderRadius: BorderRadius.circular(90.0),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.cyanAccent, width: 0.0),
                         borderRadius: BorderRadius.circular(90.0),
                       ),
                       labelText: 'USERNAME',
@@ -64,7 +72,8 @@ class MyApp extends StatelessWidget {
                       borderSide: BorderSide(width: 5),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.red, width: 0.0),
+                      borderSide:
+                          BorderSide(color: Colors.cyanAccent, width: 0.0),
                       borderRadius: BorderRadius.circular(90.0),
                     ),
                     labelText: 'PASSWORD',
@@ -91,6 +100,42 @@ class MyApp extends StatelessWidget {
                     ),
                     onPressed: () {},
                   )),
+              Container(
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  child: Text(
+                    "OR",
+                    style: TextStyle(fontSize: 24, color: Colors.white),
+                  )),
+              Container(
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                  child: Text(
+                    "login with",
+                    style: TextStyle(fontSize: 24, color: Colors.white),
+                  )),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                      child: Image.asset(
+                    "asset/img/facebook.png",
+                    height: 50,
+                    width: 50,
+                  )),
+                  Container(
+                      child: Image.asset(
+                    "asset/img/twitter.png",
+                    height: 50,
+                    width: 50,
+                  )),
+                  Container(
+                      child: Image.asset(
+                    "asset/img/google.png",
+                    height: 50,
+                    width: 50,
+                  )),
+                ],
+              )
             ],
           ),
         )));
