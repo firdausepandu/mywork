@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:share_plus/share_plus.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'MyWork',
         theme: ThemeData(
-            fontFamily: 'MyriadPro',
+            fontFamily: GoogleFonts.raleway().fontFamily,
+            //fontFamily: 'Raleway',
             // This is the theme of your application.
             //
             // Try running your application with "flutter run". You'll see the
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
             // is not restarted.
             primarySwatch: Colors.blue,
             scaffoldBackgroundColor: const Color(0xff29347d)),
+
 
 
 
@@ -51,16 +53,16 @@ class MyApp extends StatelessWidget {
                           const Icon(Icons.person, color: Colors.cyanAccent),
                       border: OutlineInputBorder(
                         borderSide:
-                            BorderSide(color: Colors.cyanAccent, width: 0.0),
+                            const BorderSide(color: Colors.cyanAccent, width: 0.0),
                         borderRadius: BorderRadius.circular(90.0),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                            BorderSide(color: Colors.cyanAccent, width: 0.0),
+                            const BorderSide(color: Colors.cyanAccent, width: 0.0),
                         borderRadius: BorderRadius.circular(90.0),
                       ),
                       labelText: 'USERNAME',
-                      labelStyle: TextStyle(color: Colors.grey)),
+                      labelStyle: const TextStyle(color: Colors.grey)),
                 ),
               ),
               Container(
@@ -69,18 +71,18 @@ class MyApp extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: '*****',
-                    prefixIcon: Icon(Icons.lock, color: Colors.cyanAccent),
+                    prefixIcon: const Icon(Icons.lock, color: Colors.cyanAccent),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(90.0),
                       borderSide: BorderSide(width: 5),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide:
-                          BorderSide(color: Colors.cyanAccent, width: 0.0),
+                          const BorderSide(color: Colors.cyanAccent, width: 0.0),
                       borderRadius: BorderRadius.circular(90.0),
                     ),
                     labelText: 'PASSWORD',
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       color: Colors.grey,
                     ),
                   ),
@@ -104,39 +106,36 @@ class MyApp extends StatelessWidget {
                     onPressed: () {},
                   )),
               Container(
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  child: const Text(
-                    "OR",
-                    style: TextStyle(fontSize: 24, color: Colors.white,fontFamily: "MyriadPro"),
-                  )),
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 30),
+                  child: const Text("OR",style: TextStyle(fontSize: 24, color: Colors.white,
+                  )
+                  )
+              ),
               Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
-                  child: const Text(
-                    "login with",
-                    style: TextStyle(fontSize: 24, color: Colors.white,fontFamily: "MyriadPro"),
-                  )),
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 30),
+                  child: const Text("login with",style: TextStyle(fontSize: 24, color: Colors.white,
+                  )
+                  )
+              ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                      child: Image.asset(
+                  Image.asset(
                     "asset/img/facebook.png",
                     height: 50,
                     width: 50,
-                  )),
-                  Container(
-                      child: Image.asset(
+                  ),
+                  Image.asset(
                     "asset/img/twitter.png",
                     height: 50,
                     width: 50,
-                  )),
-                  Container(
-                      child: Image.asset(
+                  ),
+                  Image.asset(
                     "asset/img/google.png",
                     height: 50,
                     width: 50,
-                  )),
+                  ),
                 ],
               )
             ],
