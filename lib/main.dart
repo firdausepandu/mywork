@@ -1,8 +1,12 @@
+import 'package:MyWork/mainmenu.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(
+    title:"MyWork",
+    home:MyApp()
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,21 +20,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             fontFamily: GoogleFonts.raleway().fontFamily,
             //fontFamily: 'Raleway',
-            // This is the theme of your application.
-            //
-            // Try running your application with "flutter run". You'll see the
-            // application has a blue toolbar. Then, without quitting the app, try
-            // changing the primarySwatch below to Colors.green and then invoke
-            // "hot reload" (press "r" in the console where you ran "flutter run",
-            // or simply save your changes to "hot reload" in a Flutter IDE).
-            // Notice that the counter didn't reset back to zero; the application
-            // is not restarted.
             primarySwatch: Colors.blue,
             scaffoldBackgroundColor: const Color(0xff29347d)),
-
-
-
-
         home: Scaffold(
             body: Center(
           child: Column(
@@ -52,13 +43,13 @@ class MyApp extends StatelessWidget {
                       prefixIcon:
                           const Icon(Icons.person, color: Colors.cyanAccent),
                       border: OutlineInputBorder(
-                        borderSide:
-                            const BorderSide(color: Colors.cyanAccent, width: 0.0),
+                        borderSide: const BorderSide(
+                            color: Colors.cyanAccent, width: 0.0),
                         borderRadius: BorderRadius.circular(90.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            const BorderSide(color: Colors.cyanAccent, width: 0.0),
+                        borderSide: const BorderSide(
+                            color: Colors.cyanAccent, width: 0.0),
                         borderRadius: BorderRadius.circular(90.0),
                       ),
                       labelText: 'USERNAME',
@@ -71,14 +62,15 @@ class MyApp extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: '*****',
-                    prefixIcon: const Icon(Icons.lock, color: Colors.cyanAccent),
+                    prefixIcon:
+                        const Icon(Icons.lock, color: Colors.cyanAccent),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(90.0),
                       borderSide: BorderSide(width: 5),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide:
-                          const BorderSide(color: Colors.cyanAccent, width: 0.0),
+                      borderSide: const BorderSide(
+                          color: Colors.cyanAccent, width: 0.0),
                       borderRadius: BorderRadius.circular(90.0),
                     ),
                     labelText: 'PASSWORD',
@@ -103,20 +95,25 @@ class MyApp extends StatelessWidget {
                       'SIGN IN',
                       style: TextStyle(color: Color(0xff29347d)),
                     ),
-                    onPressed: () {},
+                    onPressed: ()
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const MainMenu()));
+                    },
                   )),
               Container(
                   margin: const EdgeInsets.fromLTRB(0, 0, 0, 30),
-                  child: const Text("OR",style: TextStyle(fontSize: 24, color: Colors.white,
-                  )
-                  )
-              ),
+                  child: const Text("OR",
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white,
+                      ))),
               Container(
                   margin: const EdgeInsets.fromLTRB(0, 0, 0, 30),
-                  child: const Text("login with",style: TextStyle(fontSize: 24, color: Colors.white,
-                  )
-                  )
-              ),
+                  child: const Text("login with",
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white,
+                      ))),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
