@@ -1,4 +1,4 @@
-name: mywork
+name: MyWork
 description: MyWork
 
 # The following line prevents the package from being accidentally published to
@@ -39,6 +39,7 @@ dependencies:
   share_plus: ^6.2.0
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.10.0"
   flutter_test:
     sdk: flutter
 
@@ -70,12 +71,26 @@ flutter:
     - asset/img/facebook.png
     - asset/img/google.png
     - asset/img/twitter.png
+    - asset/img/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
+  fonts:
+    - family: MyriadPro
+      fonts:
+        - asset: asset/font/MYRIADPRO-BOLD.OTF
+        - asset: asset/font/MYRIADPRO-BOLDCOND.OTF
+        - asset: asset/font/MYRIADPRO-BOLDCONDIT.OTF
+        - asset: asset/font/MYRIADPRO-BOLDIT.OTF
+        - asset: asset/font/MYRIADPRO-COND.OTF
+        - asset: asset/font/MYRIADPRO-CONDIT.OTF
+        - asset: asset/font/MYRIADPRO-Light.OTF
+        - asset: asset/font/MYRIADPRO-REGULAR.OTF
+        - asset: asset/font/MYRIADPRO-SEMIBOLD.OTF
+        - asset: asset/font/MYRIADPRO-SEMIBOLDIT.OTF
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -96,3 +111,18 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_icons:
+    android: "launcher_icon"
+    ios: true
+    image_path: "asset/img/icon.png"
+    min_sdk_android: 21 # android min sdk min:16, default 21
+    web:
+      generate: true
+      image_path: "asset/img/icon.png"
+      background_color: "#29347d"
+      theme_color: "#29347d"
+    windows:
+      generate: true
+      image_path: "assets/img/icon.png"
+      icon_size: 48 # min:48, max:256, default: 48

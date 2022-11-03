@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'MyWork',
         theme: ThemeData(
+            fontFamily: 'MyriadPro',
             // This is the theme of your application.
             //
             // Try running your application with "flutter run". You'll see the
@@ -25,6 +26,8 @@ class MyApp extends StatelessWidget {
             // is not restarted.
             primarySwatch: Colors.blue,
             scaffoldBackgroundColor: const Color(0xff29347d)),
+
+
 
         home: Scaffold(
             body: Center(
@@ -102,15 +105,15 @@ class MyApp extends StatelessWidget {
                   )),
               Container(
                   margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  child: Text(
+                  child: const Text(
                     "OR",
-                    style: TextStyle(fontSize: 24, color: Colors.white),
+                    style: TextStyle(fontSize: 24, color: Colors.white,fontFamily: "MyriadPro"),
                   )),
               Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
-                  child: Text(
+                  child: const Text(
                     "login with",
-                    style: TextStyle(fontSize: 24, color: Colors.white),
+                    style: TextStyle(fontSize: 24, color: Colors.white,fontFamily: "MyriadPro"),
                   )),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
