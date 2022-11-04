@@ -1,4 +1,4 @@
-import 'package:MyWork/cprofile.dart';
+import 'package:MyWork/c_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
